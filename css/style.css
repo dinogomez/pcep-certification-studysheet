@@ -1,0 +1,63 @@
+.commit {
+  background: #1e2037;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  padding: 0 0.7em 0.7em 5em;
+  position: relative;
+}
+
+.commit a {
+  text-decoration: none;
+}
+
+.commit a:hover {
+  text-decoration: underline;
+}
+
+.commit .author {
+  margin-top: 0.7em;
+}
+
+.commit .author .name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.commit .author .date {
+  color: #d4d4d4;
+  font-size: 90%;
+  line-height: 1em;
+}
+
+.commit .author .gravatar {
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  position: absolute;
+  padding: 2px;
+  top: 0.7em;
+  left: 0.7em;
+  width: 50px;
+  height: 50px;
+}
+
+.commit .message {
+  font-family: "Roboto", sans-serif;
+  font-size: 80%;
+  float: left;
+}
+
+.commit .message a {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font: 13px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(225, 0, 255);
+  line-height: 1.4em;
+}
+
+.commit .message pre a,
+.commit .author .name a {
+  color: #d4d4d4;
+}

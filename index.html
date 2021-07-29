@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pcep-certification-studysheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap4-neon-glow.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <style>
+      hr {
+        height: 1px;
+        background-color: #ccc;
+        border: none;
+      }
+      .syntax {
+        background-color: #2e2e2e;
+        color: rgb(240, 130, 255);
+        border-radius: 0rem;
+        padding: 0.2rem;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/github-commit-history.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"
+    ></script>
+
+    <div class="container mt-5">
+      <h1 class="display-1">./pcep-certification-studysheet</h1>
+      <h2 class="display-4 text-mono ml-5 text-primary">
+        Study sheet for the Python PCEP Certification Exam
+      </h2>
+      <hr />
+      <br />
+
+      <!-- TABLE OF CONTENTS MODAL CONTENT @START -->
+      <div id="accordion" role="tablist">
+        <div class="card">
+          <div class="card-header" role="tab" id="headingOne">
+            <h5 class="mb-0">
+              <a
+                data-toggle="collapse"
+                href="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                Commitlog & Changelog
+              </a>
+            </h5>
+          </div>
+
+          <div
+            id="collapseOne"
+            class="collapse"
+            role="tabpanel"
+            aria-labelledby="headingOne"
+          >
+            <div id="commitHistory"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" role="tab" id="headingOne">
+            <h5 class="mb-0">
+              <a
+                data-toggle="collapse"
+                href="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                Table of Contents
+              </a>
+            </h5>
+          </div>
+
+          <div
+            id="collapseTwo"
+            class="collapse"
+            role="tabpanel"
+            aria-labelledby="headingOne"
+          >
+            <div class="card-body">
+              <ol>
+                <li>
+                  <a href="#fundamentals">Fundamental Concepts </a>
+                  <ul>
+                    <li>
+                      <a href="#interpreter"
+                        >Interpreting and the Interpreter
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <!-- TABLE OF CONTENTS MODAL CONTENT @END -->
+      <!-- ADD CONTRIBUTIONS HERE @START -->
+      <br />
+
+      <div class="container mt-1">
+        <small class="text-primary">Exam block #1: Basic Concepts (17%)</small>
+        <h2 class="display-3" id="fundamentals">Fundamental Concepts</h2>
+        <hr />
+        <br />
+        <section class="InterpretingInterpreter" id="interpreter">
+          <h5 class="mb-3">
+            Interpreting and the Interpreter
+            <a
+              href="https://towardsdatascience.com/how-does-python-work-6f21fd197888"
+              >[SOURCE]</a
+            >
+          </h5>
+
+          <p style="text-align: justify">
+            When you write a program in C/C++, you have to compile it.
+            Compilation involves translating your human understandble code to
+            machine understandable code, or
+            <span class="text-success font-weight-bold">Machine Code</span>.
+            Machine code is the base level form of instructions that can be
+            directly executed by the CPU. Upon succesfull compilation, your code
+            generates an executable file.
+          </p>
+          <!-- <span class="text-success font-weight-bold">.pyo</span> -->
+          <p style="text-align: justify">
+            For most part, Python is an interpreted language and not a compiled
+            one. Although compilation is a step. Python code, written in a
+            **.py** file is first compiled to what is called a bytecode which is
+            stored with a
+            <span class="text-success font-weight-bold">.pyc</span> or
+            <span class="text-success font-weight-bold">.pyo</span>
+            format. Instead of of translating code to machine code, Python
+            translates it to
+            <span class="text-success font-weight-bold">bytecode</span>. This
+            bytecode is a low-level set of instructions that can be executed by
+            an <span class="text-success font-weight-bold">interpreter</span>.
+            Most PC's has their own python interpreter located at
+            <span class="syntax font-weight-light"
+              >/usr/local/bin/python3.8</span
+            >.
+          </p>
+        </section>
+      </div>
+      <!-- ADD CONTRIBUTIONS HERE @END -->
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(function () {
+          $("#commitHistory").GithubCommitHistory({
+            username: "dinogomez",
+            repo: "pcep-certification-studysheet",
+            limit: 3,
+            offset: 0,
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
