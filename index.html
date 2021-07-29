@@ -22,9 +22,16 @@
         border-radius: 0rem;
         padding: 0.2rem;
       }
-
+      .justify {
+        text-align: justify;
+      }
       html {
         scroll-behavior: smooth;
+      }
+
+      .emphasize {
+        color: rgb(23, 176, 94);
+        font-weight: bolder;
       }
     </style>
   </head>
@@ -124,13 +131,13 @@
         <hr />
         <br />
         <section class="InterpretingInterpreter" id="interpreter">
-          <h5 class="mb-3">
+          <h4 class="mb-3">
             Interpreting and the Interpreter
             <a
               href="https://towardsdatascience.com/how-does-python-work-6f21fd197888"
               >[SOURCE]</a
             >
-          </h5>
+          </h4>
 
           <p style="text-align: justify">
             When you write a program in C/C++, you have to compile it.
@@ -159,6 +166,16 @@
               >/usr/local/bin/python3.8</span
             >.
           </p>
+
+          <h5 class="font-weight-bold">Why Interpreted</h5>
+          <p class="justify">
+            One popular advantage of interpreted languages is that they are
+            <span class="text-success font-weight-bold"
+              >platform-independent</span
+            >. As long as the Python bytecode and the Virtual Machine have the
+            same version, Python bytecode can be executed on any platform.
+          </p>
+          <p class="justify">Dynamic typing is another advantage.</p>
         </section>
       </div>
       <!-- ADD CONTRIBUTIONS HERE @END -->
