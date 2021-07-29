@@ -16,13 +16,13 @@
 
       var template;
       $.get(
-        "js/commit.html",
+        "https://dinogomez.github.io/pcep-certification-studysheet/js/commit.html",
         function (data) {
           template = data;
         },
         "text"
       );
-
+      console.log(template);
       jQuery.getJSON(
         "https://api.github.com/repos/" +
           options["username"] +
