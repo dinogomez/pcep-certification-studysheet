@@ -12,3 +12,4 @@
 >>
 > >   For most part, Python is an interpreted language and not a compiled one. Although compilation is a step. Python code, written in a **.py** file is first compiled to what is called a bytecode which is stored with a **.pyc** or **.pyo** format.  Instead of of translating code  to machine code, Python translates it to **bytecode**. This bytecode is a low-level set of instructions that can be executed by an **interpreter**. Most pc has their python interpreter located at `/usr/local/bin/python3.8`.
 
+I WAS HERE
