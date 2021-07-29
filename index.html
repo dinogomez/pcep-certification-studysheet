@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/bootstrap4-neon-glow.css" />
+    <link rel="stylesheet" href="css/bootstrap4-charming.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <style>
       hr {
@@ -17,10 +17,10 @@
         border: none;
       }
       .syntax {
-        background-color: #2e2e2e;
-        color: rgb(240, 130, 255);
-        border-radius: 0rem;
-        padding: 0.2rem;
+        background-color: #9c9c9c;
+        color: rgb(37, 37, 37);
+        border-radius: 0.2rem;
+        padding: 0.1rem;
       }
       .justify {
         text-align: justify;
@@ -30,7 +30,7 @@
       }
 
       .emphasize {
-        color: rgb(23, 176, 94);
+        color: rgb(0, 172, 77);
         font-weight: bolder;
       }
     </style>
@@ -50,9 +50,11 @@
     ></script>
 
     <div class="container mt-5">
-      <h1 class="display-1">./pcep-certification-studysheet</h1>
-      <h2 class="display-4 text-mono ml-5 text-primary">
-        Study sheet for the Python PCEP Certification Exam
+      <h1 class="display-2">./pcep-certification-studysheet</h1>
+      <h2 class="display-5 text-mono ml-5 text-success">
+        Study Sheet for the Python Certficiation Exam
+        <footer class="blockquote-footer">Paul Gomez</cite></footer>
+
       </h2>
       <hr />
       <br />
@@ -68,7 +70,7 @@
                 aria-expanded="false"
                 aria-controls="collapseOne"
               >
-                Commitlog & Changelog
+                <span class="text-dark">Commitlog & Changelog</span>
               </a>
             </h5>
           </div>
@@ -91,7 +93,8 @@
                 aria-expanded="false"
                 aria-controls="collapseOne"
               >
-                Table of Contents
+              <span class="text-dark">Table of Contents
+              </span>
               </a>
             </h5>
           </div>
@@ -126,56 +129,103 @@
       <br />
 
       <div class="container mt-1">
+      
         <small class="text-primary">Exam block #1: Basic Concepts (17%)</small>
         <h2 class="display-3" id="fundamentals">Fundamental Concepts</h2>
+        <div class="">
+          <small class="text-secondary"
+            >[TIP] TOPICS ARE COLLAPSIBLE, CLICK ON THE SECTION TITLE TO
+            COLLAPSE. Title</small
+          >
+        </div>
         <hr />
         <br />
         <section class="InterpretingInterpreter" id="interpreter">
-          <h4 class="mb-3">
-            Interpreting and the Interpreter
+          <h3 class="mb-3">
             <a
-              href="https://towardsdatascience.com/how-does-python-work-6f21fd197888"
-              >[SOURCE]</a
+              data-toggle="collapse"
+              href="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseOne"
             >
-          </h4>
+              <span class="text-dark">Interpreting and the Interpreter</span>
+              <a
+                href="https://towardsdatascience.com/how-does-python-work-6f21fd197888"
+                >[SOURCE]</a
+              >
+            </a>
+          </h3>
+          <div
+            id="collapseThree"
+            class="collapse show"
+            role="tabpanel"
+            aria-labelledby="headingOne"
+          >
+            <p style="text-align: justify">
+              When you write a program in C/C++, you have to compile it.
+              Compilation involves translating your human understandble code to
+              machine understandable code, or
+              <span class="emphasize">Machine Code</span>.
+              Machine code is the base level form of instructions that can be
+              directly executed by the CPU. Upon succesfull compilation, your
+              code generates an executable file.
+            </p>
+            <!-- <span class="emphasize">.pyo</span> -->
+            <p style="text-align: justify">
+              For most part, Python is an interpreted language and not a
+              compiled one. Although compilation is a step. Python code, written
+              in a
+              <span class="emphasize">.py</span> file is
+              first compiled to what is called a bytecode which is stored with a
+              <span class="emphasize">.pyc</span> or
+              <span class="emphasize">.pyo</span>
+              format. Instead of of translating code to machine code, Python
+              translates it to
+              <span class="emphasize">bytecode</span>. This
+              bytecode is a low-level set of instructions that can be executed
+              by an
+              <span class="emphasize">interpreter</span>.
+              Most PC's has their own python interpreter located at the
+              <span class="syntax font-weight-light"
+                >/usr/local/bin/python3.8</span
+              > address and you will usualy find a different numerical depending on your installed python version.
+            </p>
 
-          <p style="text-align: justify">
-            When you write a program in C/C++, you have to compile it.
-            Compilation involves translating your human understandble code to
-            machine understandable code, or
-            <span class="text-success font-weight-bold">Machine Code</span>.
-            Machine code is the base level form of instructions that can be
-            directly executed by the CPU. Upon succesfull compilation, your code
-            generates an executable file.
-          </p>
-          <!-- <span class="text-success font-weight-bold">.pyo</span> -->
-          <p style="text-align: justify">
-            For most part, Python is an interpreted language and not a compiled
-            one. Although compilation is a step. Python code, written in a
-            <span class="text-success font-weight-bold">.py</span> file is first
-            compiled to what is called a bytecode which is stored with a
-            <span class="text-success font-weight-bold">.pyc</span> or
-            <span class="text-success font-weight-bold">.pyo</span>
-            format. Instead of of translating code to machine code, Python
-            translates it to
-            <span class="text-success font-weight-bold">bytecode</span>. This
-            bytecode is a low-level set of instructions that can be executed by
-            an <span class="text-success font-weight-bold">interpreter</span>.
-            Most PC's has their own python interpreter located at
-            <span class="syntax font-weight-light"
-              >/usr/local/bin/python3.8</span
-            >.
-          </p>
+            <h4 class="font-weight-bold">Why Interpreted</h4>
+            <p class="justify">
+              One popular advantage of interpreted languages is that they are
+              <span class="emphasize"
+                >platform-independent</span
+              >. As long as the Python bytecode and the Virtual Machine have the
+              same version, Python bytecode can be executed on any platform.
+            </p>
+            <p class="justify">
+              <span class="emphasize">Dynamic typing</span> is another
+              advantage. In static-typed languages like C++, you have to declare
+              the variable type and any discrepancy like adding a string and an
+              integer is checked during compile time. In strongly typed
+              languages like Python, it is the job of the interpreter to check
+              the validity of the variable types and operations performed.
+            </p>
 
-          <h5 class="font-weight-bold">Why Interpreted</h5>
-          <p class="justify">
-            One popular advantage of interpreted languages is that they are
-            <span class="text-success font-weight-bold"
-              >platform-independent</span
-            >. As long as the Python bytecode and the Virtual Machine have the
-            same version, Python bytecode can be executed on any platform.
-          </p>
-          <p class="justify">Dynamic typing is another advantage.</p>
+            <h4 class="font-weight-bold">
+              Disadvantages of Interpreted languages
+            </h4>
+            <p class="justify">
+              Dynamic typing provides a lot of freedom, but simultaneously it
+              makes your code risky and sometimes difficult to debug. Python is
+              often accused of being <span class="emphasize">‘slow’</span>. Now while the term is relative and
+              argued a lot, the reason for being slow is because the interpreter
+              has to do extra work to have the bytecode instruction translated
+              into a form that can be executed on the machine. A StackOverflow
+              post makes it easier to understand using an analogy 
+
+              <blockquote class="blockquote">
+                <p class="mb-0">If you can talk in your native language to someone, that would generally work faster than having an interpreter having to translate your language into some other language for the listener to understand.</p>
+                <footer class="blockquote-footer">Stackoverflow comment by <cite title="Source Title">Lasse V. Karlsen</cite></footer>
+              </blockquote>
+            </p>
+          </div>
         </section>
       </div>
       <!-- ADD CONTRIBUTIONS HERE @END -->
