@@ -16,7 +16,7 @@
 
       var template;
       $.get(
-        "js/_commit.html",
+        "js/commit.html",
         function (data) {
           template = data;
         },
