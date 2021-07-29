@@ -55,28 +55,62 @@
       src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"
     ></script>
 
-    <div class="container mt-5">
+    <div class="container mt-5 pb-5">
       <h1 class="display-2">./pcep-certification-studysheet</h1>
+      
       <h2 class="display-5 text-mono ml-5 text-success">
         Study Sheet for the Python Certficiation Exam
-        <footer class="blockquote-footer">Paul Gomez</cite></footer>
+        <footer class="blockquote-footer"><a href="https://dinogomez.github.io/" class="text-dark">Paul Gomez</a></cite></footer>
 
       </h2>
       <hr />
       <br />
-
       <!-- TABLE OF CONTENTS MODAL CONTENT @START -->
       <div id="accordion" role="tablist">
-        <div class="card">
+        <div class="card " >
+          <div class="card-header d-flex justify-content-center" role="tab" id="headingOne">
+            <h5 class="mb-0">
+              <a href="https://github.com/dinogomez/pcep-certification-studysheet">
+                <img src="https://img.shields.io/github/contributors-anon/dinogomez/pcep-certification-studysheet?style=social" 
+                alt="star this repo" 
+                 style="max-width:100%;"></a>             
+               </a>
+               <a href="https://github.com/dinogomez/pcep-certification-studysheet">
+                <img src="https://img.shields.io/github/forks/dinogomez/pcep-certification-studysheet?style=social" 
+                alt="star this repo" 
+                 style="max-width:100%;"></a>             
+               </a>
+               <a href="https://github.com/dinogomez/pcep-certification-studysheet">
+                <img src="https://img.shields.io/github/stars/dinogomez/pcep-certification-studysheet?style=social
+                " 
+                alt="star this repo" 
+                 style="max-width:100%;"></a>             
+               </a>
+               <a href="https://github.com/dinogomez/pcep-certification-studysheet">
+                <img src="      https://img.shields.io/github/watchers/dinogomez/pcep-certification-studysheet?style=social
+
+                " 
+                alt="star this repo" 
+                 style="max-width:100%;"></a>             
+               </a>
+            </h5>
+          </div>
+
+          
+        </div>
+        <div class="card" >
           <div class="card-header" role="tab" id="headingOne">
             <h5 class="mb-0">
               <a
+                class="text-dark"
                 data-toggle="collapse"
                 href="#collapseOne"
                 aria-expanded="false"
                 aria-controls="collapseOne"
               >
                 <span class="text-dark">Commitlog & Changelog</span>
+                <span style="display: block; float: right;" >ᐁ</span>
+
               </a>
             </h5>
           </div>
@@ -86,6 +120,7 @@
             class="collapse show"
             role="tabpanel"
             aria-labelledby="headingOne"
+            style="overflow:overlay; height: 20em; max-height:20em;"
           >
             <div id="commitHistory"></div>
           </div>
@@ -100,6 +135,8 @@
                 aria-controls="collapseOne"
               >
               <span class="text-dark">Table of Contents
+                <span style="display: block; float: right;" >ᐁ</span>
+
               </span>
               </a>
             </h5>
@@ -120,6 +157,12 @@
                       <a href="#interpreter"
                         >Interpreting and the Interpreter
                       </a>
+                        <ul>
+                          <li><a href="#whyInterpret">Why Interpreted</a></li>
+                          <li><a href="#disadvantageInterpret">Disadvantages of Interpreted Languages</a></li>
+                          <li><a href="#garbageCollection">What exactly is Garbage Collection?</a></li>
+
+                        </ul>
                     </li>
                   </ul>
                 </li>
@@ -220,7 +263,7 @@
               > address and you will usualy find a different numerical depending on your installed python version.
             </p>
 
-            <h4 class="font-weight-bold">Why Interpreted</h4>
+            <h4 class="font-weight-bold" id="whyInterpret">Why Interpreted</h4>
             <p class="justify">
               One popular advantage of interpreted languages is that they are
               <span class="emphasize"
@@ -237,7 +280,7 @@
               the validity of the variable types and operations performed.
             </p>
 
-            <h4 class="font-weight-bold">
+            <h4 class="font-weight-bold" id="disadvantageInterpret">
               Disadvantages of Interpreted languages
             </h4>
             <p class="justify">
@@ -255,7 +298,7 @@
               </blockquote>
             </p>
 
-            <h4 class="font-weight-bold">What exactly is Garbage Collection?
+            <h4 class="font-weight-bold" id="garbageCollection">What exactly is Garbage Collection?
             </h4>
             <p class="justify">
               In older programming languages, memory allocation was quite manual. Many times when you use variables that are no longer in use or referenced anywhere else in the program, they need to be cleaned from the memory. Garbage Collector does that for you. It automatically frees up space without you doing anything. The memory management works in two ways —
@@ -267,7 +310,7 @@
             </blockquote>
             <blockquote class="blockquote block">
               <p class="mb-0">In cases where object references itself or two objects refer each other, 
-                a process called <a href="https://rushter.com/blog/python-garbage-collector/" class="emphasize">generation garbage collection</a> helps. This is something traditional reference counting cannot take care of.</p>
+                a process called <a href="https://rushter.com/blog/python-garbage-collector/" class="emphasize"><u>generation garbage collection</u></a> helps. This is something traditional reference counting cannot take care of.</p>
             </blockquote>
 
 
@@ -282,7 +325,7 @@
           $("#commitHistory").GithubCommitHistory({
             username: "dinogomez",
             repo: "pcep-certification-studysheet",
-            limit: 3,
+            limit: 10,
             offset: 0,
           });
         });
