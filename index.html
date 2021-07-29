@@ -33,6 +33,12 @@
         color: rgb(0, 172, 77);
         font-weight: bolder;
       }
+
+      .block{
+        padding-left: 1em;
+        border-left: 0.2em solid #181818 !important;
+        background-color: rgb(218, 218, 218);
+      }
     </style>
   </head>
   <body>
@@ -135,11 +141,34 @@
         <div class="">
           <small class="text-secondary"
             >[TIP] TOPICS ARE COLLAPSIBLE, CLICK ON THE SECTION TITLE TO
-            COLLAPSE. Title</small
+            COLLAPSE.</small
           >
         </div>
         <hr />
         <br />
+
+        <!-- TEMPLATE -->
+        <!-- 
+
+          <h4 class="font-weight-bold">Why Interpreted</h4>
+            <p class="justify">
+              One popular advantage of interpreted languages is that they are
+              <span class="emphasize"
+                >platform-independent</span
+              >. As long as the Python bytecode and the Virtual Machine have the
+              same version, Python bytecode can be executed on any platform.
+            </p>
+            <p class="justify">
+              <span class="emphasize">Dynamic typing</span> is another
+              advantage. In static-typed languages like C++, you have to declare
+              the variable type and any discrepancy like adding a string and an
+              integer is checked during compile time. In strongly typed
+              languages like Python, it is the job of the interpreter to check
+              the validity of the variable types and operations performed.
+            </p>
+
+          
+         -->
         <section class="InterpretingInterpreter" id="interpreter">
           <h3 class="mb-3">
             <a
@@ -220,11 +249,28 @@
               into a form that can be executed on the machine. A StackOverflow
               post makes it easier to understand using an analogy 
 
-              <blockquote class="blockquote">
+              <blockquote class="blockquote block">
                 <p class="mb-0">If you can talk in your native language to someone, that would generally work faster than having an interpreter having to translate your language into some other language for the listener to understand.</p>
                 <footer class="blockquote-footer">Stackoverflow comment by <cite title="Source Title">Lasse V. Karlsen</cite></footer>
               </blockquote>
             </p>
+
+            <h4 class="font-weight-bold">What exactly is Garbage Collection?
+            </h4>
+            <p class="justify">
+              In older programming languages, memory allocation was quite manual. Many times when you use variables that are no longer in use or referenced anywhere else in the program, they need to be cleaned from the memory. Garbage Collector does that for you. It automatically frees up space without you doing anything. The memory management works in two ways —
+            </p>
+            <blockquote class="blockquote block">
+              <p class="mb-0">In a simplified way, it keeps track of the number of references to an object. 
+                When that number goes down to zero, it deletes that object. This is called <span class="emphasize">reference counting</span>. 
+                This cannot be disabled in Python.</p>
+            </blockquote>
+            <blockquote class="blockquote block">
+              <p class="mb-0">In cases where object references itself or two objects refer each other, 
+                a process called <a href="https://rushter.com/blog/python-garbage-collector/" class="emphasize">generation garbage collection</a> helps. This is something traditional reference counting cannot take care of.</p>
+            </blockquote>
+
+
           </div>
         </section>
       </div>
